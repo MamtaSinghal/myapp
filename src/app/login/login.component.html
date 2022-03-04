@@ -1,0 +1,22 @@
+<nav class="navbar navbar-light bg-dark justify-content-end sticky content" style="position: absolute; width: 100%;">
+    <div class="text-light mr-5" style="cursor: pointer; font-size: medium;" routerLink="/post">POSTS</div>
+</nav>
+<div class="align-items-center backgroundContainer d-flex justify-content-center">
+  <div class="login">
+    <div class="login-header">
+      <h1>Login</h1>
+    </div>
+    <div class="login-form ">
+      <div *ngIf="error" class="text-danger mb-3" style="font-size: 15px;">Something went wrong Please check again.</div>
+        <h2>Mobile No.</h2>
+        <input type="text" placeholder="Mobile No." [(ngModel)]="mobile"/><br>
+        <h2>Password</h2>
+        <input type="password" placeholder="Password" [(ngModel)]="password"/><br>
+        <button type="button" value="Login" class="btn btn login-button pl-4 pr-4 mt-5 text-light" (click)="submit()">LogIn</button>
+      </div>
+  </div>
+</div>
+
+
+
+<!-- required maxlength="10" ng-pattern="/^[7-9][0-9]{9}$/" -->

@@ -1,0 +1,9 @@
+<app-nav-bar></app-nav-bar>
+<div class="main">
+    <h1 class="text-center">POSTS</h1>
+    <div class="card shadow mt-5 mb-3 p-3 cursor-pointer" *ngFor="let post of allPosts">
+        <div (click)="getPostDetail(post)">
+            <p style="cursor: pointer;">{{post.title}}</p>
+        </div>
+    </div>
+</div>

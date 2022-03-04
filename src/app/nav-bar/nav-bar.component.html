@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-dark justify-content-end sticky w-100 position-absolute ">
+  <div  style="display: flex; justify-content: space-between; " class="w-100">
+    <div>
+      <div class="sidenav--secondary bg-dark" style="display: flex; justify-content: space-between; ">
+        <h1 class="setMenu mr-5">Menu</h1>
+        <a routerLink="/post" style="font-size: 20px;" class="mr-3">Post</a>
+        <a routerLink="/album" style="font-size: 20px;">Album</a>
+      </div>
+    </div>
+    <div>
+      <div *ngIf="userEmail">
+        <div class="d-flex">
+          <div (click)="logoutUser()" style="font-size: 15px; cursor: pointer;" class="text-light mr-3 mt-2 fs-6">
+            Logout
+          </div>
+         <div  class="d-flex">
+          <button class="btn  rounded-circle" type="button" data-toggle="dropdown">{{userEmail.charAt(0).toUpperCase()}}</button><br/>
+          <h5 class="text-light  mt-2 ml-2">{{userEmail}}</h5>
+         </div>
+          <!-- <ul class="dropdown-menu ">
+            <li><a>{{email}}</a></li>
+            <li><a href="/login">Logout</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="sidenav bg-dark">
+  <h1 class="setMenu">Menu</h1>
+  <a routerLink="/post">Post</a>
+  <a routerLink="/album">Album</a>
+</div>

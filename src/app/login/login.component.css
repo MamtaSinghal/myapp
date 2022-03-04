@@ -1,0 +1,98 @@
+
+   h1, h2, h3, h4, h5, h6, a {
+    margin:0; padding:0;
+  }
+  .login {
+    margin:0 auto;
+    width: 70% ;
+    max-width: 400px;
+  }
+  .login-header {
+    color:#fff;
+    text-align:center;
+    font-size:200%;
+  }
+  .login-form {
+    background:linear-gradient(33deg, grey, transparent);
+    border-radius:10px;
+  }
+  .login-form h2 {
+    text-align:left;
+    margin-left:40px;
+    color:#fff;
+  }
+  .login-form {
+    box-sizing:border-box;
+    padding-top:50px;
+    padding-bottom:10%;
+    margin:5% auto;
+    text-align:center;
+  }
+  .login input[type="text"],
+  .login input[type="password"] {
+    max-width:400px;
+    width: 80%;
+    line-height:3em;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 15px;
+    margin:1em 2em;
+    border-radius:5px;
+    border:2px solid #f2f2f2;
+    outline:none;
+    padding-left:10px;
+  }
+  .login-form input[type="button"] {
+    height:30px;
+    width:100px;
+    background:#fff;
+    border:1px solid #f2f2f2;
+    border-radius:20px;
+    color: slategrey;
+    text-transform:uppercase;
+    font-family: 'Ubuntu', sans-serif;
+    cursor:pointer;
+  }
+  .sign-up{
+    color:#f2f2f2;
+    margin-left:-70%;
+    cursor:pointer;
+    text-decoration:underline;
+  }
+  .no-access {
+    color:#E86850;
+    margin:20px 0px 20px -57%;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+  .try-again {
+    color:#f2f2f2;
+    text-decoration:underline;
+    cursor:pointer;
+  }
+
+  .login-button {
+    background-color: darkgrey;
+    font-size: 20px;
+  }
+  
+  /*Media Querie*/
+ @media only screen and (min-width : 150px) and (max-width : 530px){
+    .login-form h2 {
+      text-align:center;
+      margin:0;
+    }
+    .sign-up, .no-access {
+      margin:10px 0;
+    }
+    .login-button {
+      margin-bottom:10px;
+      /* background-color: rgb(54, 46, 46); */
+    }
+  }
+.backgroundContainer{
+   height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../assets/images/bg.jpg');
+}

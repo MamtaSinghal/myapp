@@ -1,0 +1,41 @@
+html{
+  height: 100%;
+}
+body {
+  margin:0px;
+  font-family: 'Ubuntu', sans-serif;
+  background-size: 100% 150%;
+} 
+.main {
+  margin-left: 285px; /* Same as the width of the sidenav */
+  margin-right: 80px;
+  font-size: 20px; /* Increased text to enable scrolling */
+  color: black;
+  overflow-y: auto;
+  height: 100vh;
+  padding: 0px 10px;
+  padding-top: 70px;
+
+}
+.main::-webkit-scrollbar {
+  display: none;
+}
+
+.card_size{
+  width: 95%;
+  width: 95%;
+}
+
+.setSize{
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 800px){
+  .sidenav {padding: 10px; width: 100%;height: auto;position: relative;}
+  .main{margin-left:0px; margin-right: 0px;}
+  /* .content_padding {padding: 5px; margin:0px 100px;} */
+  .image_margin{margin: 20px 100px;}
+  /* .row {margin-left: 50px;} */
+  input {width: 100%;}
+}
