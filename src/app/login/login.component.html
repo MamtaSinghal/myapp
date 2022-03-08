@@ -7,9 +7,9 @@
       <h1>Login</h1>
     </div>
     <div class="login-form ">
-      <div *ngIf="error" class="text-danger mb-3" style="font-size: 15px;">Something went wrong Please check again.</div>
+      <div *ngIf="error" class="text-danger mb-3" style="font-size: 15px;">{{error}}</div>
         <h2>Mobile No.</h2>
-        <input type="text" placeholder="Mobile No." [(ngModel)]="mobile"/><br>
+        <input type="text" placeholder="Mobile No." [(ngModel)]="mobile" [maxlength]="10"/><br>
         <h2>Password</h2>
         <input type="password" placeholder="Password" [(ngModel)]="password"/><br>
         <button type="button" value="Login" class="btn btn login-button pl-4 pr-4 mt-5 text-light" (click)="submit()">LogIn</button>

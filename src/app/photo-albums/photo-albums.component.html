@@ -1,38 +1,10 @@
+
 <app-nav-bar></app-nav-bar>
-<div class="main" >
-  <!-- <input list=title pattern = "" id="default" [value]="filteredImage">
-  <datalist id="title">
-    <select size=8 [formControl]="selectedImage" (change)="getFilteredImage($any($event.target))">
-      <option value="">Select Album </option>
-      <option *ngFor="let album of allPhotoAlbums" data-value="album.title">{{album.title}}
-    </select>
-  </datalist> -->
 
+<div class="main" *ngIf="allPhotoAlbums.length > 0">
+  <app-custom-search [allPhotoAlbums]="allPhotoAlbums" [albums]="allPhotoAlbums"></app-custom-search>
+  <div style="margin-top: 80px;">
+    <app-card [allPhotoAlbums]="allPhotoAlbums"></app-card>
 
-  <input type="text" list="title" [(ngModel)]="albumTitle" (change)="getFilteredImage($event)" style="width: 100%">
-  <datalist id="title">
-    <option *ngFor="let album of allPhotoAlbums" [value]="album.title" data-value = "album.id">{{album.title}}</option>
-  </datalist>
-
-<!-- <div>
-  <input type="text" [value]="searchValue" (keyup)="searchValue = $any($event.target).value" >
-</div> -->
-
-  <!-- <select class="form-control selected mt-3" style="height: 60px; font-size: 20px;" [formControl]="selectedImage" (change)="getFilteredImage($any($event.target))">
-    <option value="">Select Album </option>
-    <option *ngFor= "let album of allPhotoAlbums" [value]="album.id">{{album.title}}</option>
-  </select> -->
-
-  <div class="row mt-5">
-    <div class="col-12 col-sm-4" *ngFor="let album of allPhotoAlbums">
-      <div class="card shadow-lg card_size mb-4 mr-sm-3" >
-        <img class="card-img-top setSize" src={{album.url}} alt="Card image cap">
-        <div class="card-body">
-          <p class="card-text">
-            {{ (album.title?.length>28)? (album.title | slice:0:28)+'..':(album.title) }}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div> 
+  </div>
 </div>

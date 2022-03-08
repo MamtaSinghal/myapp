@@ -1,0 +1,12 @@
+<div class="row mt-5" style="margin-top: 100px;">
+    <div class="col-12 col-sm-4" *ngFor="let album of allPhotoAlbums">
+      <div class="card shadow-lg card_size mb-4 mr-sm-3" >
+        <img class="card-img-top setSize" src={{album.url}} alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">
+            {{ (album.title?.length>28)? (album.title | slice:0:28)+'..':(album.title) }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> 

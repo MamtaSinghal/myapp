@@ -15,7 +15,6 @@ body {
   height: 100vh;
   padding: 0px 10px;
   padding-top: 70px;
-
 }
 .main::-webkit-scrollbar {
   display: none;
@@ -38,4 +37,47 @@ body {
   .image_margin{margin: 20px 100px;}
   /* .row {margin-left: 50px;} */
   input {width: 100%;}
+}
+
+
+
+.wrapper {
+  border: 1px solid #d8d8d8;
+  position: absolute;
+  z-index: 9999999999;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+.outer_div {
+  width: 403px;
+  background-color: white;
+  height: 116px;
+  overflow: hidden;   
+}
+.inner_div {
+   overflow-y: scroll;
+   overflow-x: hidden;
+   max-height: 100%;
+   width: 100%;
+}
+.element {
+   width: 100%;
+  height: 28px;
+  line-height: 28px;
+  cursor: pointer;
+  border-bottom: 1px solid #d8d8d8;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #646464;   
+}
+.element-hover {
+ background-color: red !important;   
 }

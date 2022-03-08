@@ -1,0 +1,18 @@
+<div class="searchList">
+  <div class="searchbox__input">
+    <input class="form-control" id="label" [(ngModel)]='albumTitle' (keydown)="keydownHandler($event)" autocomplete="off" value={{inputVal}} (focus)="showList(true)"
+      (blur)="showList(false)" required myDirective>
+  
+  </div>
+  <div *ngIf="show">
+    <ul class="listStyle">
+      <li *ngFor="let i of allPhotoAlbums; let idx=index"
+        [ngStyle]="{'background-color': idx === selectedIdx && inputVal.length ? 'lightgrey' : 'white' }">
+        <a>
+          <h6 class="searchbox__suggestion-heading" [innerHTML]="i.title"></h6>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+</div>

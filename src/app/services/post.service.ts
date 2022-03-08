@@ -24,9 +24,4 @@ export class PostService {
     let url = 'https://jsonplaceholder.typicode.com/photos';
     return this.http.get<any>(url);
   }
-
-  loginUser():Observable<any>{
-    let url ="https://jsonplaceholder.typicode.com/users";
-    return this.http.get<any>(url);
-  }
 }

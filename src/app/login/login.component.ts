@@ -21,26 +21,30 @@ export class LoginComponent implements OnInit {
   defaultPassword : string = "1234";
   password: string = "";
   loggedInUserDetail :any;
-  error: boolean =false
+  error: string =''
 
-  ngOnInit(): void {
-     this.postService.loginUser().subscribe((resp: any) => {
-      this.allUserDetails = resp;
-    })
-  }
+  ngOnInit(): void {}
   submit() {
-    if(this.defaultPassword === this.password ){
-     let loggedInUser = this.allUserDetails.filter((user:any) => user.phone === this.mobile);
-     if(loggedInUser.length > 0 ){
-      this.loggedInUserDetail =  loggedInUser[0];
-      this.error = false  
-      this.store.dispatch(new userActions.AddUserEmail({email:this.loggedInUserDetail.email}))
+    // if(this.defaultPassword === this.password ){
+    //  let loggedInUser = this.allUserDetails.filter((user:any) => user.phone === this.mobile);
+    //  if(loggedInUser.length > 0 ){
+    //   this.loggedInUserDetail =  loggedInUser[0];
+    //   this.error = false  
+    //   this.store.dispatch(new userActions.AddUserEmail({email:this.loggedInUserDetail.email}))
+    //   this.authService.setIsAuthenticated(true);
+    //   this.router.navigate(['/post']) 
+    //  }else{
+    //   this.error = true  
+    //  }
+    // }
+
+    if(this.mobile.length == 10 && this.password){
+      this.error = "" 
+      this.store.dispatch(new userActions.AddUserEmail({email:'test@gmail.com'}))
       this.authService.setIsAuthenticated(true);
       this.router.navigate(['/post']) 
-     }else{
-      this.error = true  
-     }
-    
+    }else{
+      this.error = "Something went wrong Please check again." 
     }
   }
 
